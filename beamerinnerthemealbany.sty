@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		Title Page Template
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\defbeamertemplate*{title page}{lucid}
+{ \vskip0.5cm
+
+ \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+    \begin{tikzpicture}
+    \useasboundingbox(0,0) rectangle(\the\paperwidth,1.2);
+    {\usebeamercolor[fg]{frametitle-left}}
+    \fill[color=frametitle-left.fg] (0.2,0) rectangle(\the\marginedPaperWidth,1.2); 
+        {\node[anchor=west] at (0.3,0.61){\usebeamerfont{frametitle} \includegraphics[scale = 0.4]{UAlogo.png}};}
+    \end{tikzpicture} 
+  \end{beamercolorbox}  
+
+    {\centering
+      \usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle
+      \par
+    }
+    \vspace{0.5cm}
+    {\centering
+      \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle
+      \par
+    }
+    {\centering
+      \usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor
+      \par
+    } \vspace{0.5cm}
+    {\centering
+      \usebeamerfont{author}\usebeamercolor[fg]{author}\insertinstitute
+      \par
+    } \vspace{0.5cm}
+    {\centering
+      \usebeamerfont{date}\usebeamercolor[fg]{date}\insertdate
+      \par
+    } 
+  \vfill
+}
+
+\setbeamertemplate{itemize items}[square]
