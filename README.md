@@ -2,6 +2,8 @@
 
 LaTeX slide template for University at Albany created by Zhenhuan Yang.
 
+UAlbany logo is sourced from its [brand identity](https://www.albany.edu/communications-marketing/brand-identity).
+
 ## How to use
 
 Download the code and modify `main.tex` for your convenience.
