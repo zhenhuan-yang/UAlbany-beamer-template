@@ -13,15 +13,13 @@
 %\usepackage{mwe}
 \usepackage{capt-of}
 \usepackage{tabu}
-% \usepackage[pdfusetitle]{hyperref}
-\usepackage{bibentry}
-\usepackage{amsthm}
-\usepackage{amsmath}
-\usepackage{algorithmic}
-\usepackage{algorithm2e}
-\usepackage{algorithmic}
+\usepackage{amsthm,amsmath,amssymb}
 \usepackage{float}
 \usepackage[bottom]{footmisc}
+\usepackage[square,numbers,sort&compress]{natbib}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+
 %\usepackage[svgnames]{xcolor}
 %\usepackage{caption}
 %\captionsetup[figure]{labelfont={color=purple}}
@@ -46,6 +44,10 @@
   }
 \makeatother
 \theoremstyle{mystyle}
+\setbeamertemplate{theorems}[numbered] 
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{code}{Algorithm}
 
 
 \newcommand\blfootnote[1]{%
@@ -59,7 +61,7 @@
 \title[Presentation]{Presentation Slide Template}
 \author[ZY]{Zhenhuan Yang}
 \institute[UAlbany]{Department of Mathematics \& Statistics\\University at Albany, SUNY}
-\date{April 22, 2015}
+\date{July 12, 2022}
 
 \begin{document}
 
@@ -77,31 +79,70 @@
 	\tableofcontents
 \end{frame}
 
-% % Background
-% \section{Background}
-% \input{background}
+% First section
+\section[First]{First Section}
 
-% % Problem Statement
-% \section{Problem Statement}
-% \input{problem-statement}
+\begin{frame}
+	\frametitle{Outline}
+	\tableofcontents[currentsection]
+\end{frame}
 
-% % Related Work
-% \section{Related Work}
-% \input{related-work}
+\begin{frame}{Theorems}
+\begin{thm}\label{thm:euler}
+Euler's formula
+\[
+	e^{i\pi} + 1 = 0.
+\]
+\end{thm}
+\begin{thm}\label{thm:einstein}
+Mass–energy equivalence
+\[
+	E = mc^2
+\]
+\end{thm}
+\end{frame}
 
-% % Proposed Work
-% \section{Proposed Work}
-% \input{proposed-work}
+\begin{frame}{Itemization}
+\begin{itemize}
+\item First item 
+\item Second item
+\item ...	
+\end{itemize}
+	
+\end{frame}
 
-% % Research Plan
-% \section{Research Plan}
-% \input{research-plan}
+\begin{frame}{Algorithm}
+\begin{code}[Gradient Descent]
+\begin{algorithmic}[1]
+\STATE Choose an initial vector of parameters $w$ and learning rate $\eta$
+\WHILE {True}
+\STATE $w = w - \eta\nabla f(w)$
+\ENDWHILE
+\end{algorithmic}
+\end{code}
+
+\end{frame}
+
+
+% Second section
+\section[Second]{Second Section}
+
+\begin{frame}
+	\frametitle{Outline}
+	\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}{Citation}
+Cite \citet{anonymous} using within the text format and then cite again with parenthetical citation \citep{langley00}.
+
+\end{frame}
 
 \begin{frame}[allowframebreaks]
 	\frametitle{References}
-	\bibliographystyle{apalike}
+	\bibliographystyle{plainnat}
 	{\footnotesize
 	\bibliography{bibfile}}
 \end{frame}
+
 
 \end{document}
