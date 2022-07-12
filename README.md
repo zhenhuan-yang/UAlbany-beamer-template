@@ -2,4 +2,4 @@
 
 LaTeX Slide Template for University at Albany created by Zhenhuan Yang
 
-Modify the title page with your information
+<img src="titlepage.pdf" width="600">
