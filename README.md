@@ -8,7 +8,8 @@ Download the code and modify `main.tex` for your convenience.
 
 ## Features
 
-
+- Logo in titlepage
+- Theme color: purple and gold
 
 ## Screenshot of the titlepage
 
