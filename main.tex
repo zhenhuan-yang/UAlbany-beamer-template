@@ -1,0 +1,107 @@
+%%
+% Please see https://bitbucket.org/rivanvx/beamer/wiki/Home for obtaining beamer.
+%%
+\documentclass{beamer}
+\mode<presentation>
+%\usetheme{Boadilla}
+\usetheme{albany}
+%\usecolortheme{dolphin}
+
+% Packagess
+\usepackage{graphicx}
+\usepackage{subfigure}
+%\usepackage{mwe}
+\usepackage{capt-of}
+\usepackage{tabu}
+% \usepackage[pdfusetitle]{hyperref}
+\usepackage{bibentry}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{algorithmic}
+\usepackage{algorithm2e}
+\usepackage{algorithmic}
+\usepackage{float}
+\usepackage[bottom]{footmisc}
+%\usepackage[svgnames]{xcolor}
+%\usepackage{caption}
+%\captionsetup[figure]{labelfont={color=purple}}
+%\captionsetup[table]{labelfont={color=purple}}
+%\usepackage[font={color=purple,bf}]{caption}
+%\makeatletter
+%\def\BState{\State\hskip-\ALG@thistlm}
+%\makeatother
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+ %\renewcommand{\figurename}{\color{purple}{figure}}
+ \definecolor{purple}{RGB}{61,22,96}
+\definecolor{gold}{RGB}{236,168,19}
+ \makeatletter
+ \def\th@mystyle{%
+    \normalfont % body font
+    \setbeamercolor{block title example}{bg=purple,fg=gold}
+    \setbeamercolor{block body example}{bg=purple!20,fg=black}
+    \def\inserttheoremblockenv{exampleblock}
+  }
+\makeatother
+\theoremstyle{mystyle}
+
+
+\newcommand\blfootnote[1]{%
+\begingroup
+\renewcommand\thefootnote{}\footnote{#1}%
+\addtocounter{footnote}{-1}%
+\endgroup
+}
+
+
+\title[Presentation]{Presentation Slide Template}
+\author[ZY]{Zhenhuan Yang}
+\institute[UAlbany]{Department of Mathematics \& Statistics\\University at Albany, SUNY}
+\date{April 22, 2015}
+
+\begin{document}
+
+% Constants
+% \input{constants}
+
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Overview}
+	\tableofcontents
+\end{frame}
+
+% % Background
+% \section{Background}
+% \input{background}
+
+% % Problem Statement
+% \section{Problem Statement}
+% \input{problem-statement}
+
+% % Related Work
+% \section{Related Work}
+% \input{related-work}
+
+% % Proposed Work
+% \section{Proposed Work}
+% \input{proposed-work}
+
+% % Research Plan
+% \section{Research Plan}
+% \input{research-plan}
+
+\begin{frame}[allowframebreaks]
+	\frametitle{References}
+	\bibliographystyle{apalike}
+	{\footnotesize
+	\bibliography{bibfile}}
+\end{frame}
+
+\end{document}
